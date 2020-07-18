@@ -1,0 +1,43 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-md-offset-4 col-sm-offset-3"><div id="success" class="alert alert-success" {{#if noMessage}}hidden{{/if}}>
+{{successMsg}}
+</div></div>
+
+</div>
+    
+
+{{#each products}}
+    <div class = "row">
+        {{#each this}}
+            <div class = "col-sm-6 col-md-6">
+                <div class="cards-container">
+                    <figure class="card">
+                        <div class="card__hero">
+                            <img src="{{this.imagePath}}" alt="" class="card__img">
+                        </div>
+                        
+                        <h2 class="card__name">{{this.title}}</h2>
+                        <div class = "laptop__details">
+                        <p class="card__detail"><span class="emoji-left">🖥</span> {{this.screen}}</p>
+                        <p class="card__detail"><span class="emoji-left">🧮</span> {{this.cpu}}</p>
+                        <p class="card__detail"><span class="emoji-left">💾</span> {{this.storage}}</p>
+                        <p class="card__detail"><span class="emoji-left">📦</span> {{this.ram}}</p>
+                        </div>
+                        <div class="laptop__description">
+                            <p class="laptop__source">For more info: <a href="https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361"
+                    target="_blank">https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361</a></p>
+                        </div>
+                        
+                        
+                        <div class="card__footer">
+                            <p class="card__price">${{this.price}}</p>
+                            <a href="/cart/{{this._id}}" class="card__link"><i class="fas fa-shopping-cart"></i>Add to Cart</a>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}
+
