@@ -10,48 +10,77 @@ mongoose.connect('mongodb://localhost:27017/shopping',{ useNewUrlParser:true , u
 var products = [
 
     new Product({
-    title: 'Apple Macbook Pro 2018',
-    imagePath: '/Image/mac.jpg',
-    cpu: "6-core Intel i7, 8th generation",
-    ram: "16GB",
-    storage: "1TB GB SSD",
-    screen: "15-inch Retina display",
-    description: 'Apple Laptop',
-    price: 3199
+    title: 'Superman Americana T-Shirt',
+    imagePath: '/Image/superman.jpeg',
+    co: "DC Comics",
+    description: '100% spun cotton',
+    price: 30
     }),
 
     new Product({
-    title: 'Huawei MateBook X Pro',
-    imagePath: '/Image/hu.jpg',
-    cpu: "Intel Core i7, 8th generation",
-    ram: "8GB",
-    storage: "512 GB SSD",
-    screen: "13.9-inch, 3K (3,000 x 2,080)",
-    description: 'Huawei Laptop',
-    price: 1499
+    title: 'Batman Built-Up Backpack',
+    imagePath: '/Image/batmanbag.png',
+    co: "DC Comics",
+    description: 'Approx. 12" x 19 1/2"',
+    price: 70
     }),
 
     new Product({
-    title: 'Dell XPS 13',
-    imagePath: '/Image/dell.png',
-    cpu: "Intel Core i7, 8th generation",
-    ram: "16GB",
-    storage: "512 GB SSD",
-    screen: "13.3-inch, Full HD",
-    description: 'Dell Laptop',
-    price: 1199
+    title: 'The Joker Comedy Club T-Shirt',
+    imagePath: '/Image/jokertee.jpg',
+    co: "DC Comics",
+    description: '100% cotton',
+    price: 30
+    }),
+    
+    new Product({
+    title: 'Birds of Prey Blind Box Vinyl',
+    imagePath: '/Image/birdsofprey.jpg',
+    co: "DC Comics",
+    description: 'Approx. 2" - 3" tall',
+    price: 8
     }),
 
     new Product({
-    title: 'Samsung Notebook 9',
-    imagePath: '/Image/samsung.jpg',
-    cpu: "Intel Core i7, 8th generation",
-    ram: "16GB",
-    storage: "256 GB SSD",
-    screen: "15-inch, Full HD",
-    description: 'Samsung Laptop',
-    price: 1499
-    })
+    title: 'Marvel Womens T-Shirt',
+    imagePath: '/Image/marveltee.jpg',
+    co: "Marvel Comics",
+    description: '100% cotton',
+    price: 29
+    }),
+
+    new Product({
+    title: 'Endgame Nano Gauntlet Mug',
+    imagePath: '/Image/marvelmug.jpg',
+    co: "Marvel Avengers",
+    description: '20 oz. Ceramic',
+    price: 17
+    }),
+    
+    new Product({
+    title: 'Eat the Universe: Cookbook',
+    imagePath: '/Image/marvelbook.jpg',
+    co: "Marvel Comics",
+    description: 'By Justin Warner',
+    price: 30
+    }),
+
+    new Product({
+    title: 'Iron Man Single Cup Coffee Maker',
+    imagePath: '/Image/marvelcoffee.jpg',
+    co: "Marvel Avengers",
+    description: 'Approx. 8" x 15" 13"',
+    price: 150
+    }),
+
+    new Product({
+    title: 'Spider-Man Interactive Watch',
+    imagePath: '/Image/marvelwatch.jpg',
+    co: "Marvel Avengers",
+    description: 'Touch screen',
+    price: 40
+    }),
+    
 ];
 
 var done = 0;

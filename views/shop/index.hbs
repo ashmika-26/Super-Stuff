@@ -1,6 +1,6 @@
 
-<div class="row">
-    <div class="col-sm-12 col-md-12 col-md-offset-4 col-sm-offset-3"><div id="success" class="alert alert-success" {{#if noMessage}}hidden{{/if}}>
+<div class="row justify-content-center">
+    <div class="message col-sm-6 col-md-6 col-md-offset-4 col-sm-offset-3"><div id="success" class="alert alert-success" {{#if noMessage}}hidden{{/if}}>
 {{successMsg}}
 </div></div>
 
@@ -10,7 +10,7 @@
 {{#each products}}
     <div class = "row">
         {{#each this}}
-            <div class = "col-sm-6 col-md-6">
+            <div class = "col-sm-6 col-md-4">
                 <div class="cards-container">
                     <figure class="card">
                         <div class="card__hero">
@@ -19,14 +19,12 @@
                         
                         <h2 class="card__name">{{this.title}}</h2>
                         <div class = "laptop__details">
-                        <p class="card__detail"><span class="emoji-left">🖥</span> {{this.screen}}</p>
-                        <p class="card__detail"><span class="emoji-left">🧮</span> {{this.cpu}}</p>
-                        <p class="card__detail"><span class="emoji-left">💾</span> {{this.storage}}</p>
-                        <p class="card__detail"><span class="emoji-left">📦</span> {{this.ram}}</p>
+                        <p class="card__detail">{{this.co}}</p>
+                        <p class="card__detail">{{this.description}}</p>
                         </div>
                         <div class="laptop__description">
-                            <p class="laptop__source">For more info: <a href="https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361"
-                    target="_blank">https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361</a></p>
+                            <p class="laptop__source">For more info: <a href="https://www.boxlunch.com/"
+                             target="_blank">https://www.boxlunch.com/</a></p>
                         </div>
                         
                         

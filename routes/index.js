@@ -11,11 +11,11 @@ router.get('/', function(req, res, next) {
   Product.find(function(err,docs){
 
     var productChunks = [];
-    var chunkSize = 2;
+    var chunkSize = 3;
     for(var i = 0; i<docs.length; i += chunkSize){
       productChunks.push(docs.slice(i,i+chunkSize));
     }
-    res.render('shop/index', { title: 'The Laptop Shop', products: productChunks,successMsg: successMsg, noMessage:!successMsg});
+    res.render('shop/index', { title: 'The Super Stuff', products: productChunks,successMsg: successMsg, noMessage:!successMsg});
   });
 });
 
@@ -38,6 +38,15 @@ router.get('/reduce/:id', function(req, res, next) {
   var cart = new Cart(req.session.cart ? req.session.cart : {});
 
   cart.reduceByOne(productId);
+  req.session.cart = cart;
+  res.redirect('/shopping');
+});
+
+router.get('/add/:id',function(req,res,next){
+  var productId = req.params.id;
+  var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+  cart.addByOne(productId);
   req.session.cart = cart;
   res.redirect('/shopping');
 });
