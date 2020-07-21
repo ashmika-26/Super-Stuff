@@ -32,7 +32,7 @@ var products = [
     description: '100% cotton',
     price: 30
     }),
-    
+
     new Product({
     title: 'Birds of Prey Blind Box Vinyl',
     imagePath: '/Image/birdsofprey.jpg',
@@ -56,7 +56,7 @@ var products = [
     description: '20 oz. Ceramic',
     price: 17
     }),
-    
+
     new Product({
     title: 'Eat the Universe: Cookbook',
     imagePath: '/Image/marvelbook.jpg',
@@ -80,7 +80,7 @@ var products = [
     description: 'Touch screen',
     price: 40
     }),
-    
+
 ];
 
 var done = 0;
@@ -96,6 +96,3 @@ for (var i = 0; i < products.length; i++){
 function ex(){
     mongoose.disconnect();
 }
-
-
-
